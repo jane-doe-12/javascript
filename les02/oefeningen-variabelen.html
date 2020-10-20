@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Oefening variabelen</title>
+</head>
+
+<body>
+    <script>
+    let getal = 20;
+    getal *= 5;
+    console.log(getal);
+
+    getal += 5;
+    console.log(getal);
+
+    getal -= 1
+    console.log(getal);
+
+    getal /= 4;
+    console.log(getal);
+
+    getal = (getal * 3 + 5) * 4;
+    console.log(getal);
+
+    /* Niet op deze manier doen:
+    		console.log(getal*5);
+    		console.log(getal*5+5);
+    		console.log(getal*5+5-1);
+    		console.log((getal*5+5-1)/4);
+    		console.log(((getal*5+5-1)/4*3+5)*4); */
+
+    let naam = prompt('Wat is je naam?', "Sara");
+    let boek = prompt('Welk boek heb je gekocht?', "Titel van je boek");
+    let prijs = prompt('Hoeveel heb je ervoor betaald?', "20");
+    
+    document.write("<h1>Aankoop boek</h1>");
+    document.write(`<p>Hallo ${naam}, gefeliciteerd met je aankoop van "${boek}". De prijs hiervoor is ${prijs} euro.</p>`);
+    </script>
+</body>
+
+</html>
