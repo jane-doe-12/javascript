@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oefening substrings Sara</title>
+</head>
+<body>
+	<script>
+		let voornaam = "Java";
+		let achternaam = "Script";
+		let combo = voornaam + " " + achternaam;
+		document.write(`<p>Hallo ${combo}</p>`);
+
+		let lengte = combo.length;
+		document.write(`<p>Jouw naam bevat ${lengte} karakters</p>`);
+
+		let filename = "javaScriptFrameWork";
+		document.write(`<p>De originele filename is: '${filename}'</p>`);
+		document.write(`<p>De filename kan beter in kleine letters getypt worden, dus: '${filename.toLowerCase()}'</p>`);
+
+		let filename1 = filename.substring(0, 10);
+		let filename2 = filename.substring(10, 20);
+		document.write(`<p>Als je '${filename.toLowerCase()}' opsplitst, krijg je '${filename1.toLowerCase()}' en '${filename2.toLowerCase()}'</p>`);
+
+		let locatie = filename.substring(5, 6); 
+		document.write(`<p>Het zesde karakter (volgens mensen) in '${filename.toLowerCase()}' is: ${locatie}</p>`);
+
+		let email = "jan.klaassen@mail.be";
+		let positie = email.indexOf("@");
+		document.write(`<p>In '${email}' staat de @ op positie: ${positie}</p>`);
+ 
+		document.write(`<p>De naam is dus: ${email.substring(0, positie)}</p>`);
+
+		let tekst = "Deze tekst is te lang en zal worden afgekapt op 8 tekens m.b.v substr()";
+		let substr = tekst.substr(0, 8);
+		document.write(`<p>De originele tekst '${tekst}' wordt dan: ${substr}</p>`);
+	</script>
+</body>
+</html>
