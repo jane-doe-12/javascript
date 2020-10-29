@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Sara</title>
+</head>
+
+<body>
+    <script>
+	    // Maanden
+	    let maanden = ["januari", "februari", "maart"];
+	    maanden[3] = "april";
+	    maanden[4] = "mei";
+	    maanden[5] = "juni";
+	    document.write(`<p>${maanden}</p>`);
+
+	    maanden.push("juli");
+	    document.write(`<p>${maanden}</p>`);
+
+	    maanden.push("augustus", "september", "oktober", "november", "december");
+	    document.write(`<p>${maanden}</p>`);
+
+	    let aantal = maanden.length;
+	    document.write(`<p>Er zijn ${aantal} maanden in de Array</p>`);
+
+	    let positieMarch = maanden.indexOf("March");
+	    document.write(`<p>${positieMarch}</p>`);
+
+
+	    // Namen:
+	    let namen = ["Erik", "Sofie", "Adam", "Zorro"];
+	    document.write(`<p>${namen.sort()}</p>`);
+
+	    document.write(`<p>De gesorteerde namen zijn: ${namen.sort()}</p>`);
+
+	    let vraagNaam = prompt("Welke naam wil je zoeken?");
+	    document.write(`<p>De naam die je zoekt staat op postitie: ${namen.indexOf(vraagNaam)}</p>`);
+
+	    // Vraag gebruiker:
+	    let vraag = prompt("Wat is je volledige naam?");
+	    let split = vraag.split(" ");
+	    let reverse = split.reverse();
+	    let join = reverse.join(" ");
+	    document.write(`<p>Jouw naam genoteerd als familienaam voornaam is: ${join}</p>`);
+    </script>
+</body>
+
+</html>
