@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array maken</title>
+</head>
+
+<body>
+	<script>
+	// Manier 1
+		let scores = [];
+		scores[0] = 39;
+		scores[1] = 40;
+		scores[2] = 100;
+		scores[3] = 49;	
+		document.write(`<p>${scores.lenght}</p>`);
+		
+	// Lenght: lengte opvragen:
+		let afmeting = [20, 33, 40];
+		let getal1 = afmeting[0];
+		let getal2 = afmeting[1];
+
+		document.write(`<p>${getal1} ${getal2} of op deze manier ${afmeting[2]}</p>`);
+
+	// push: iets toevoegen
+		let scores = [5, 14, 18];
+		scores.push(20);
+	document.write(scores);
+
+
+
+
+
+		
+
+// _____________________________________________________________________________________________
+		let scriptingtalen = ["JavaScript", "PHP"];
+		
+		
+
+
+		// Manier 2
+		let namen = new Array();
+		
+		let seizoenen = new Array("winter", "lente", "zomer", "herfst");
+		document.write(`
+			<p>${scores}</p>
+			<p>${seizoenen}</p>
+			<p>${scriptingtalen}</p>
+			`);
+	</script>
+</body>
+
+</html>
