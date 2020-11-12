@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+	<meta charset="utf-8">
+	<title>parseInt</title>
+</head>
+
+
+<body>
+	<script>
+		let getal1 = prompt("Wat is getal1?");
+		console.log(typeof getal);
+
+		let getal2 = prompt("Wat is getal2?");
+		/*Door een plus te schrijven gaat javasript de getallen naast elkaar zetten en niet optellen.*/
+		let totaal = parseInt(getal1) + parseInt(getal2);
+
+		/*Gebruik parseFloat om komma getallen te berekenen*/
+		let totaal = parseFloat(getal1) + parseFloat(getal2);
+
+		document.write(`${getal1} en ${getal2} opgeteld is ${totaal}`);
+	</script>
+
+</body>
+
+</html>

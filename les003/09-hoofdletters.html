@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hoofdletters</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    let tekstvariabele = "Dit is een voorbeeldtekst"
+    /*Je kan hetzelfde doen met kleine letters met: .toLower.case*/
+    let hoofdletters = tekstvariabele.toUpperCase();
+
+    document.write(`<p>De variabele "${tekstvariabele}" in hoofdletters is: "${hoofdletters}".</p>`);
+    document.write(`<p>De oorspronkelijke variabele is nog altijd "${tekstvariabele}".</p>`);
+
+    /*Hiermee veranderd de tekst over je hele pagina naar hoofdletters. In het vorige voorbeeld verander je dit maar 1 keer*/
+    tekstvariabele = tekstvariabele.toUpperCase();
+    document.write(`<p>${tekstvariabele}</p>`);
+    </script>
+</body>
+
+</html>
