@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening prompt controleren</title>
+</head>
+
+<body>
+    <script>
+    let pensioenJaartal = prompt("Wanneer ga je op pensioen?");
+    let d = new Date();
+    let huidigJaartal = d.getFullYear();
+    
+    if (pensioenJaartal == null) {
+        document.write("U heeft geannulleerd!");
+    } 
+
+    else if (pensioenJaartal.length == 0) {
+        document.write("u heeft niets ingegeven !");
+    } 
+
+    else if (isNaN(pensioenJaartal)) {
+        document.write("Dit is geen nummer!");
+    } 
+
+    else if (pensioenJaartal.length != 4) {
+        document.write("Geef een jaartal in met 4 cijfers!");
+    } 
+
+    else if (pensioenJaartal < huidigJaartal) {
+        document.write("Ben je al op pensioen dan?");
+    } 
+
+    else {
+        let aantalJaren = pensioenJaartal - huidigJaartal;
+        document.write(`Je gaat op pensioen binnen ${aantalJaren} jaren.`);
+    }
+    </script>
+</body>
+
+</html>

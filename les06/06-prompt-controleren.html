@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt controleren</title>
+</head>
+
+<body>
+    <script>
+    let naam = prompt("Geef je naam in aub :");
+    
+    if (naam == null) {
+        document.write("Je heeft geannuleerd!");
+    } 
+
+    else if (naam.length == 0) {
+        document.write("Je heeft niets ingegeven !");
+    } 
+
+    else {
+        document.write(`Hallo ${naam}! Hoe is het ermee?`);
+    }
+    </script>
+</body>
+
+</html>

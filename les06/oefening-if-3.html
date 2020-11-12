@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening if</title>
+</head>
+
+<body>
+    <script>
+    	let ouderdom = prompt("Hoe oud ben je?", 18);
+    	if (ouderdom >= 18) {
+        document.write("<p>Je bent meerderjarig.</p>");
+    	}
+
+    	let wachtwoord = prompt("Geef een wachtwoord in:");
+    	if (wachtwoord != "JavaScript") {
+        document.write("<p>Dit niet het juiste wachtwoord!</p>");
+    	}
+
+    	let pensioenleeftijd = prompt("Op welke leeftijd mag je op pensioen gaan?", 65);
+    	if (ouderdom < pensioenleeftijd) {
+        document.write("<p>Je kan nog niet op pensioen gaan.</p>");
+    	}
+    </script>
+</body>
+
+</html>

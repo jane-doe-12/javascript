@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>opdracht tijdstip</title>
+</head>
+
+<body>
+	<script>
+		let vraag = prompt("Hoe laat is het nu?");
+		let vandaag = new Date();
+		// Hier vraag je je vraag op // 
+		let tijd = vandaag.getHours();
+		document.write(`<p>Het is nu ${vraag} uur.</p>`);
+          // Hier    // //Hier //
+		if(vraag > 0 && vraag <= 7) {
+			document.write("<p>Goeienacht</p>");
+		}
+
+		else if(vraag > 7 && vraag <= 11) {
+			document.write("<p>Goeiemorgen</p>");
+		}
+
+		else if(vraag > 11 && vraag <= 18) {
+			document.write("<p>Goeiemiddag</p>");
+		}
+
+		else if (vraag >= 18) {
+			document.write("<p>Goeie avond</p>");
+		}
+	</script>
+</body>
+
+</html>
