@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Opdracht graad</title>
+</head>
+<body>
+
+	<script>
+		let vraag = prompt("Geef punten met twee cijfers");
+		
+		if (vraag == null) {
+        document.write("<p>Je hebt geannulleerd!</p>");
+    	}
+		 
+		else if (vraag.length == 0) {
+        document.write("<p>Je heeft niets ingegeven!</p>");
+    	}
+
+		else if (isNaN(vraag)) {
+        document.write("<p>Dit is geen nummer!</p>");
+    	} 
+    	
+    	else if (vraag >= 99) {
+    		document.write("<p>Geef de punten in met twee cijfers</p");
+    	}
+
+    	else if(vraag >= 95) {
+    		document.write("<p>De graad is A+</p>");
+    	}
+
+    	else if(vraag >= 90) {
+    		document.write("<p>De graad is A</p>");
+    	}
+
+    	else if(vraag >= 80) {
+    		document.write("<p>De graad is B</p>");
+    	}
+
+    	else if(vraag >= 70) {
+    		document.write("<p>De graad is C</p>");
+    	}
+
+    	else if(vraag >= 60) {
+    		document.write("<p>De graad is D</p>");
+    	}
+
+    	else if(vraag >= 50) {
+    		document.write("<p>De graad is E</p>");
+    	}
+
+    	else {
+    		document.write("<p>De graad is F</p>");
+    	}
+	</script>
+	
+</body>
+
+</html>
