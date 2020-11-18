@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening eerste character</title>
+</head>
+
+<body>
+    <script>
+    function eersteCharacter() {
+        let vakNaam = "Javascript";
+        let eerste = vakNaam.charAt(0);
+        document.write(`Het eerste karakter uit "${vakNaam}" is: ${eerste}.`);
+    }
+
+    eersteCharacter();
+
+//Argumenten doorgeven__________________________________________________________________________
+
+    function eersteCharacter(naam) {
+    let eerste = naam.charAt(0);
+    document.write(`<p>Het eerste karakter uit "${naam}" is: ${eerste}</p>`);
+}
+
+    eersteCharacter("JavaScript");
+    eersteCharacter("html");
+    eersteCharacter("css");
+    </script>
+</body>
+
+</html>
