@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Opdracht herhalingslussen</title>
+</head>
+
+<body>
+	<script>
+		let aantal= prompt('Hoeveel automerken wil je ingeven?');
+		let merk = []
+		
+		for (let i=1; i<=aantal; i++) {
+			merk.push(prompt(`Geef merk nr${i} in.`));
+		}
+
+		document.write("De automerken zijn:");
+		for (let i=1; i<=aantal; i++) {
+			document.write(`<p>${i}. ${merk[i-1]}</p>`)
+		}		
+	</script>
+</body>
+
+</html>
