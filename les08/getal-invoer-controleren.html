@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht: getal invoer controleren</title>
+</head>
+
+<body>
+    <script>
+    "use strickt";
+
+    let aantal= prompt('Hoeveel nummers wil je ingeven?');
+		let nummers = []
+		
+		for (let i=1; i<=aantal; i++) {
+			nummers.push(prompt(`Geef nr ${i} in.`));
+		}
+		
+    function contoleAantal(vraag) {
+        if (vraag == null) {
+            fout = true;
+            return 'Je hebt geannuleerd!';
+        } 
+
+        else if (vraag == 0) {
+            fout = true;
+            return 'Je hebt niets ingegeven!';
+        } 
+
+        else if (vraag.length != 2) {
+            fout = true;
+            return 'Geef minstens 2 karakters in!';
+        } 
+
+        else if (isNaN(vraag)) {
+        	fout = true;
+            return 'Je hebt geen nummer ingegeven!';
+        }
+
+        else if (vraag < 0) {
+        	return 'Je cijfer moet hoger zijn dan 0';
+        }
+    }
+    </script>
+</body>
+
+</html>
