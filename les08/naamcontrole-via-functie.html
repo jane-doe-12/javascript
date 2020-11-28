@@ -10,33 +10,33 @@
 <body>
     <script>
     let fout = false;
-    let voornaam = prompt("Wat is je voornaam?");
+    let voornaam = prompt("Wat is je voornaam");
+    let achternaam = prompt("Wat is je achternaam");
 
     function controle(naam) {
-
         if (naam == null) {
             fout = true;
-            return 'Je hebt geannuleerd!';
+            return 'je hebt geannuleerd!';
         } 
 
-        else if (naam == 0) {
+        else if (naam.length == 0) {
             fout = true;
-            return 'Je hebt niets ingegeven!';
+            return 'je hebt niets ingegeven!';
         } 
 
-        else if (naam.length != 2) {
-        	fout = true;
-            return 'Geef minstens 2 karakters in!';
+        else if (naam.length < 2) {
+            fout = true;
+            return 'geef minstens 2 karakters in!';
         } 
 
         else {
-            return voornaam.charAt(0).toUpperCase() + voornaam.substring(1);
+            return naam.charAt(0).toUpperCase() + naam.substring(1);
         }
     }
 
-    let voornaam1 = controle(voornaam);
-
-    document.write(`<p>Hey ${voornaam1}</p>`);
+    let controleVoornaam = controle(voornaam);
+    let controleAchternaam = controle(achternaam);
+    document.write(`Hey ${controleVoornaam} ${controleAchternaam}`);
     </script>
 </body>
 

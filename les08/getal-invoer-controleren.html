@@ -11,38 +11,37 @@
     <script>
     "use strickt";
 
-    let aantal= prompt('Hoeveel nummers wil je ingeven?');
-		let nummers = []
+    let vraag= prompt('Hoeveel nummers wil je ingeven?');
+	let nummers = []
 		
-		for (let i=1; i<=aantal; i++) {
-			nummers.push(prompt(`Geef nr ${i} in.`));
+		for (let i=1; i<=vraag; i++) {
+			nummers.push(prompt(`Geef nummer ${i} in.`));
 		}
 		
-    function contoleAantal(vraag) {
-        if (vraag == null) {
+    function contoleAantal(aantal) {
+        if (nummers == null) {
             fout = true;
             return 'Je hebt geannuleerd!';
         } 
 
-        else if (vraag == 0) {
+        else if (nummers == 0) {
             fout = true;
             return 'Je hebt niets ingegeven!';
         } 
 
-        else if (vraag.length != 2) {
-            fout = true;
-            return 'Geef minstens 2 karakters in!';
-        } 
-
-        else if (isNaN(vraag)) {
+        else if (isNaN(nummers)) {
         	fout = true;
             return 'Je hebt geen nummer ingegeven!';
         }
 
-        else if (vraag < 0) {
+        else (nummers < 0) {
+            fout = true;
         	return 'Je cijfer moet hoger zijn dan 0';
         }
     }
+
+    let aantal1 = contoleAantal(vraag);
+    document.write(`<p>${aantal1}</p>`);
     </script>
 </body>
 
