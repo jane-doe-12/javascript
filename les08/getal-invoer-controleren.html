@@ -9,39 +9,49 @@
 
 <body>
     <script>
-    "use strickt";
+    "use strict"
+    
+    let vraag = prompt("Hoeveel getallen wil je ingeven?");
+    let getallen = [];
+    
+    if (vraag == 0) {
+        document.write("Je hebt niets ingegeven");
+    } 
 
-    let vraag= prompt('Hoeveel nummers wil je ingeven?');
-	let nummers = []
-		
-		for (let i=1; i<=vraag; i++) {
-			nummers.push(prompt(`Geef nummer ${i} in.`));
-		}
-		
-    function contoleAantal(aantal) {
-        if (nummers == null) {
-            fout = true;
-            return 'Je hebt geannuleerd!';
-        } 
+    else if (vraag == null) {
+        document.write("Je heeft geannuleerd");
+    } 
 
-        else if (nummers == 0) {
-            fout = true;
-            return 'Je hebt niets ingegeven!';
-        } 
-
-        else if (isNaN(nummers)) {
-        	fout = true;
-            return 'Je hebt geen nummer ingegeven!';
-        }
-
-        else (nummers < 0) {
-            fout = true;
-        	return 'Je cijfer moet hoger zijn dan 0';
+    else if (vraag > 0) {
+        for (let i = 0; i < vraag; i++) {
+            let vraag2 = prompt(`Geef getal ${i+1} in.`);
+            getallen.push(vraag2);
         }
     }
 
-    let aantal1 = contoleAantal(vraag);
-    document.write(`<p>${aantal1}</p>`);
+    function controleAantal(aantal) {
+        if (aantal == null) {
+            return "fout"
+        } 
+
+        else if (aantal.length == 0) {
+            return "fout"
+        } 
+
+        else if (!isNaN(aantal)) {
+            return "fout"
+        } 
+
+        else if (aantal == "") {
+            return "fout"
+        } 
+
+        else {
+            document.write(aantal);
+        }
+    }
+
+    controleAantal(getallen);
     </script>
 </body>
 
