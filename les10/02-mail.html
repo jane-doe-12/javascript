@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail valideren</title>
+    <style type="text/css">
+    textarea {
+        width: 300px;
+        height: 150px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- ----------------------------------------
+  					Formulier
+    ---------------------------------------- -->
+    <form>
+        <p><label>Naam: </label><input type="text" name="naam" id="naam"></p>
+        <p><label>email: </label><input type="text" name="email" id="email"></p>
+        <p>
+            <label>Wat wil je mij zeggen?</label><br>
+            <textarea id="mijnTekst" placeholder="Typ hier je bericht"></textarea>
+        </p>
+        <button onclick="sendMail();">Send</button>
+        <script>
+        function sendMail() {
+            let link = "mailto:" + encodeURIComponent("me@example.com;") +
+                encodeURIComponent(document.getElementById('email').value) +
+                "?cc=" + encodeURIComponent("hetCCadres@example.com;tweedeCCadres@example.com") +
+                "&subject=" + encodeURIComponent("Dit is het onderwerp") +
+                "&body=" +
+                "naam:" +
+                encodeURIComponent(document.getElementById('naam').value) +
+                encodeURIComponent("\r\n\n") +
+                "bericht:" +
+                encodeURIComponent(document.getElementById('mijnTekst').value);
+            window.location.href = link;
+            //zorgt voor versturing naar mail programma
+        }
+        </script>
+</body>
+
+</html>
