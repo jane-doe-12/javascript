@@ -19,7 +19,7 @@
     } 
 
     else if (vraag == null) {
-        document.write("Je heeft geannuleerd");
+        document.write("Je hebt geannuleerd");
     } 
 
     else if (vraag > 0) {
@@ -56,3 +56,51 @@
 </body>
 
 </html>
+
+<!------------------------------------------
+Juiste oplossing volgens leerkracht:
+------------------------------------------->
+
+<script>
+    "use strict";
+
+    let controleAantal = (input) => {
+        if (input == null) {
+            document.write("u heeft geannuleerd!");
+        } 
+
+        else if (input.length == 0) {
+            document.write("u heeft niets ingegeven !");
+        } 
+
+        else if (!isNaN(input)) {
+            return (input)
+        } 
+
+        else {
+            document.write("Dit is geen correct ingave");
+            return 0
+        }
+    }
+
+
+    let controleGetal = (input) => {
+        if (input == null || input.length == 0 || isNaN(input)) {
+            return "fout";
+        }
+        return (input)
+    }
+
+    let getallen = [];
+    let aantal = prompt('Hoeveel getallen wil je ingeven?');
+    aantal = controleAantal(aantal);
+    console.log(aantal);
+    if (aantal > 0) {
+        for (let i = 0; i < aantal; i++) {
+            let getal = prompt(`Geef getal ${i + 1} in`);
+            getallen[i] = controleGetal(getal);
+
+        }
+        document.write(getallen);
+    }
+    </script>

@@ -41,3 +41,46 @@
 </body>
 
 </html>
+
+<!-- ----------------------------------------
+Juiste oplossing volgens leerkracht:
+----------------------------------------- -->
+
+<script>
+"use strict";
+
+let fout = false;
+let voornaam;
+let achternaam;
+
+function controle(input) {
+    if (input == null) {
+        document.write("u heeft geannuleerd!");
+        fout = true;
+    } 
+
+    else if (input.length == 0) {
+        document.write("u heeft niets ingegeven !");
+        fout = true;
+    } 
+
+    else if (input.length < 2) {
+        document.write("Geef minimaal 2 tekens in.");
+        fout = true;
+    } 
+
+    else {
+        return `${input.charAt(0).toUpperCase() + input.substring(1)}`;
+    }
+}
+
+voornaam = prompt("Geef je voornaam in ajb");
+voornaam = controle(voornaam);
+if (!fout) {
+    achternaam = prompt("Geef je achternaam in ajb");
+    achternaam = controle(achternaam);
+    if (!fout) {
+        document.write(`Hey ${voornaam} ${achternaam}`);
+    }
+}
+</script>
